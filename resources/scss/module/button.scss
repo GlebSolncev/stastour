@@ -1,0 +1,80 @@
+@use '../theme/fonts/raleway';
+
+.button {
+    background: var(--orange);
+    @include raleway.raleway;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 9px 58px;
+    transition: background-color .3s;
+
+    &:hover {
+        background: var(--blue);
+    }
+
+    &--primary {
+        background: var(--blue);
+
+        &:hover {
+            background: var(--dark-blue);
+        }
+    }
+
+    &--secondary {
+        border: 1px solid var(--blue);
+        background: transparent;
+        color: var(--var);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &--tiny {
+        padding: 9px 23px;
+    }
+
+    &--fill {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &--filter {
+        box-sizing: border-box;
+        border: 1px solid var(--blue);
+        color: var(--blue);
+        background: transparent;
+        width: 100%;
+        border-radius: 30px;
+        cursor: pointer;
+        min-height: 50px;
+
+        &.button--active {
+            padding: 13px 0;
+            position: relative;
+            background: var(--blue);
+            color: #fff;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                background: url('/asset/icon/close.svg');
+                width: 20px;
+                height: 20px;
+                top: 13px;
+                right: 13px;
+            }
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use "color";
+@use "fonts";
+@use "grid";
+
+:root {
+    @include color.install();
+    @include fonts.install();
+    @include grid.install();
+}

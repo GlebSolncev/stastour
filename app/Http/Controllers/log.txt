@@ -1,0 +1,4221 @@
+Array
+(
+    [message] => Unable to extract timestamp and signatures from header
+    [line] => 28
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PBIwxP7qxJGwScG1gBJwRQw",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1714492236,
+  "data": {
+    "object": {
+      "id": "pi_3PBIwxP7qxJGwScG1rk6K88Q",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PBIwxP7qxJGwScG1rk6K88Q_secret_2izOTePIfKsABNolvWXUqNTnH",
+      "confirmation_method": "automatic",
+      "created": 1714492235,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PBIwxP7qxJGwScG1vLnCfmC",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PBIwxP7qxJGwScGjfbCC1Ip",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_0hiwZkknWt7Myk",
+    "idempotency_key": "ff4c2e35-c291-4829-a457-e34a96d0d755"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1714493306,v1=6394479e9aace8d41ad793535790c0879a7e0f6d75e67a59a438c4c8aa85adf7,v0=4f182c417a88e97f870f444fa58964b4b9c2f54bc860a6800c6701c3f0e7d1d9
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PBIwxP7qxJGwScG1gBJwRQw",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1714492236,
+  "data": {
+    "object": {
+      "id": "pi_3PBIwxP7qxJGwScG1rk6K88Q",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PBIwxP7qxJGwScG1rk6K88Q_secret_2izOTePIfKsABNolvWXUqNTnH",
+      "confirmation_method": "automatic",
+      "created": 1714492235,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PBIwxP7qxJGwScG1vLnCfmC",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PBIwxP7qxJGwScGjfbCC1Ip",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_0hiwZkknWt7Myk",
+    "idempotency_key": "ff4c2e35-c291-4829-a457-e34a96d0d755"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1714493735,v1=d5a9970a81023b84e2448f034ec2c8a9645605e062e365a7e5ea3b3cfccf1c69,v0=f3cd13754526550cb15f16be4b1aadaaca80c6d0ff0a300326bf61723a49be04
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PBIwxP7qxJGwScG1gBJwRQw",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1714492236,
+  "data": {
+    "object": {
+      "id": "pi_3PBIwxP7qxJGwScG1rk6K88Q",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PBIwxP7qxJGwScG1rk6K88Q_secret_2izOTePIfKsABNolvWXUqNTnH",
+      "confirmation_method": "automatic",
+      "created": 1714492235,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PBIwxP7qxJGwScG1vLnCfmC",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PBIwxP7qxJGwScGjfbCC1Ip",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_0hiwZkknWt7Myk",
+    "idempotency_key": "ff4c2e35-c291-4829-a457-e34a96d0d755"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1714493767,v1=38f03e8d75aa8ecd75b460d647eb6c417ab2803e6b854e7d3b64cf462a5753ab,v0=50dfdf9ac44ae1ab79324bd1df579f73c065f9ebe90e2a11bfe57f311ac3d21e
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PBJNuP7qxJGwScG0KdfvZJM",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1714493907,
+  "data": {
+    "object": {
+      "id": "pi_3PBJNuP7qxJGwScG0jwtUyz8",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PBJNuP7qxJGwScG0jwtUyz8_secret_KjoTqR6DNT5jgQOE5GfkRonzZ",
+      "confirmation_method": "automatic",
+      "created": 1714493906,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PBJNuP7qxJGwScG01ZK5K4k",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PBJNtP7qxJGwScG1vD3oP7O",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 3,
+  "request": {
+    "id": "req_2DgxkIVY9ZAdfn",
+    "idempotency_key": "606eb3ea-be25-4ebf-8f7e-8729d1b4fa1c"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1714493908,v1=6f05818e5cfc12d65c324d07b834544c93fea00074020128020f67ee7f05e40b,v0=2c417a7d05add5b9fece5b7cb75a71bf87fa7b9ca25bffffcb064de3a0f51536
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PBJNuP7qxJGwScG0KdfvZJM",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1714493907,
+  "data": {
+    "object": {
+      "id": "pi_3PBJNuP7qxJGwScG0jwtUyz8",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PBJNuP7qxJGwScG0jwtUyz8_secret_KjoTqR6DNT5jgQOE5GfkRonzZ",
+      "confirmation_method": "automatic",
+      "created": 1714493906,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PBJNuP7qxJGwScG01ZK5K4k",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PBJNtP7qxJGwScG1vD3oP7O",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_2DgxkIVY9ZAdfn",
+    "idempotency_key": "606eb3ea-be25-4ebf-8f7e-8729d1b4fa1c"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1714493922,v1=b08dfd9a4e9f42831496a48926b2c8928e57374130f5982295b8ce5dbc1544a7,v0=c330ffb169ec716346de184888beb763fc416ba932c54b6b7e23a88de85f89aa
+)
+Stripe\Event Object
+(
+    [id] => evt_3PBJa3P7qxJGwScG0My65DCM
+    [object] => event
+    [api_version] => 2023-10-16
+    [created] => 1714494660
+    [data] => Stripe\StripeObject Object
+        (
+            [object] => Stripe\PaymentIntent Object
+                (
+                    [id] => pi_3PBJa3P7qxJGwScG0NyW5hTW
+                    [object] => payment_intent
+                    [amount] => 10000
+                    [amount_capturable] => 0
+                    [amount_details] => Stripe\StripeObject Object
+                        (
+                            [tip] => Array
+                                (
+                                )
+
+                        )
+
+                    [amount_received] => 10000
+                    [application] => 
+                    [application_fee_amount] => 
+                    [automatic_payment_methods] => 
+                    [canceled_at] => 
+                    [cancellation_reason] => 
+                    [capture_method] => automatic
+                    [client_secret] => pi_3PBJa3P7qxJGwScG0NyW5hTW_secret_LNiJwpPJWakrNVeU2WjSDMCQA
+                    [confirmation_method] => automatic
+                    [created] => 1714494659
+                    [currency] => eur
+                    [customer] => cus_Q1MIF9yzxfHbK7
+                    [description] => 
+                    [invoice] => 
+                    [last_payment_error] => 
+                    [latest_charge] => ch_3PBJa3P7qxJGwScG0xoI0dtk
+                    [livemode] => 
+                    [metadata] => Stripe\StripeObject Object
+                        (
+                        )
+
+                    [next_action] => 
+                    [on_behalf_of] => 
+                    [payment_method] => pm_1PBJa2P7qxJGwScGvdzE0DKQ
+                    [payment_method_configuration_details] => 
+                    [payment_method_options] => Stripe\StripeObject Object
+                        (
+                            [card] => Stripe\StripeObject Object
+                                (
+                                    [installments] => 
+                                    [mandate_options] => 
+                                    [network] => 
+                                    [request_three_d_secure] => automatic
+                                )
+
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [processing] => 
+                    [receipt_email] => 
+                    [review] => 
+                    [setup_future_usage] => 
+                    [shipping] => 
+                    [source] => 
+                    [statement_descriptor] => 
+                    [statement_descriptor_suffix] => 
+                    [status] => succeeded
+                    [transfer_data] => 
+                    [transfer_group] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => Stripe\StripeObject Object
+        (
+            [id] => req_hnDgfRm6x3rPzH
+            [idempotency_key] => f762615d-9d5b-4ada-a46a-1a634e821bba
+        )
+
+    [type] => payment_intent.succeeded
+)
+Stripe\Event Object
+(
+    [id] => evt_3PBJhvP7qxJGwScG1z7JPzt0
+    [object] => event
+    [api_version] => 2023-10-16
+    [created] => 1714495148
+    [data] => Stripe\StripeObject Object
+        (
+            [object] => Stripe\PaymentIntent Object
+                (
+                    [id] => pi_3PBJhvP7qxJGwScG1tB1qVLN
+                    [object] => payment_intent
+                    [amount] => 10000
+                    [amount_capturable] => 0
+                    [amount_details] => Stripe\StripeObject Object
+                        (
+                            [tip] => Array
+                                (
+                                )
+
+                        )
+
+                    [amount_received] => 10000
+                    [application] => 
+                    [application_fee_amount] => 
+                    [automatic_payment_methods] => 
+                    [canceled_at] => 
+                    [cancellation_reason] => 
+                    [capture_method] => automatic
+                    [client_secret] => pi_3PBJhvP7qxJGwScG1tB1qVLN_secret_QUWFzhQKvosDDYGnNJS3WtQi6
+                    [confirmation_method] => automatic
+                    [created] => 1714495147
+                    [currency] => eur
+                    [customer] => cus_Q1MQMgxmytklwV
+                    [description] => 
+                    [invoice] => 
+                    [last_payment_error] => 
+                    [latest_charge] => ch_3PBJhvP7qxJGwScG17i1Whdv
+                    [livemode] => 
+                    [metadata] => Stripe\StripeObject Object
+                        (
+                        )
+
+                    [next_action] => 
+                    [on_behalf_of] => 
+                    [payment_method] => pm_1PBJhvP7qxJGwScGo1Ug7VNA
+                    [payment_method_configuration_details] => 
+                    [payment_method_options] => Stripe\StripeObject Object
+                        (
+                            [card] => Stripe\StripeObject Object
+                                (
+                                    [installments] => 
+                                    [mandate_options] => 
+                                    [network] => 
+                                    [request_three_d_secure] => automatic
+                                )
+
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [processing] => 
+                    [receipt_email] => 
+                    [review] => 
+                    [setup_future_usage] => 
+                    [shipping] => 
+                    [source] => 
+                    [statement_descriptor] => 
+                    [statement_descriptor_suffix] => 
+                    [status] => succeeded
+                    [transfer_data] => 
+                    [transfer_group] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => Stripe\StripeObject Object
+        (
+            [id] => req_2jQ9g6tLJMYl0i
+            [idempotency_key] => 8a0808d8-b3aa-4eda-ab5e-2fa1ed043eb6
+        )
+
+    [type] => payment_intent.succeeded
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718492612,v1=531140b99ecf0160da6df3351dff99d1f26d4e94fd829794e874c20bb90348f8
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718492629,v1=1b47e8452cfc40157b343415d503bfdb8ca4bb81b208424852fcfc20ce6029fd
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718496162,v1=d455956fcec3e2f01fadc63cb6788b064151122060c8035ae58974fac48b5851
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718510726,v1=5c9d672ebdc5077644104dd88bc51d621c9275d61b41bdae9f555447eb9f5ecd
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718560167,v1=e55a5de92e27c817d182c83bfd37b018038ef83d2dbfad26ce038508d53ce0c4
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718629484,v1=2cd396df4c476b886ebf7407ec4db826795ccf160672ac5ea829044866f5ee31
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718629501,v1=d4932c27e65dae8d05d304990705bb780bf0fa44009ceadca753d6b7f2d4eae6
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718633092,v1=2f93463ef12bcd8403cfcbd606c97c9ba4136d550704184678a4a0ff4e71a00a
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718644386,v1=ba937fc3191c2e0c5816453d9c2f11eba8c5844ad9ddbac007faba45191960b2
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718644401,v1=bf29ba60ef105532c7d6a075217580b7d0a3925aed089772238a27e47d2cf0fc
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718647523,v1=a02299bccf1915af9cb1a3a5ad7bfe6940985fabd790d2291c1299add465e7b3
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718648007,v1=a92c17631a4be38c97d1ca35cf14c441c9f06e38a20e61b2e58e19b7a4c9856d
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718648115,v1=df1dae66e9787f18a953d6da965c6a6d97ae66cc03173b824b71afea812dca18
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718662411,v1=a38cea405b3c9c88e2b6072f02b22e0a680a416e1c11955e30091c255f3f8ca3
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718697352,v1=e100943b41be0a875a9a2a80515d7975bbe76111d2abe63b5b856505735a4e51
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718713530,v1=e1d8cd4a7f3d8ff2c58b3b1f7d0d86517efdda6fec490c82ac4f07dda7389383
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PS5d1P7qxJGwScG0koMYlky",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718492612,
+  "data": {
+    "object": {
+      "id": "pi_3PS5d1P7qxJGwScG0sU1eJnY",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PS5d1P7qxJGwScG0sU1eJnY_secret_306DfFCnKN2M28EaJasNo25M7",
+      "confirmation_method": "automatic",
+      "created": 1718492603,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PS5d1P7qxJGwScG0S9fwGHu",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PS5d0P7qxJGwScGEdMTB7QM",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_kosmoV2AVlFVbh",
+    "idempotency_key": "2d4c92b4-9295-4223-b463-b170b73352c7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718733089,v1=6cf0638c3ca0eaafb3c5e1c79038b2aa070a9f45462b76a8d9271ff0b5ee62e9
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718736079,v1=b3da03d5f532367006889551832f4d76e39e368f1b92389ecdde9884fc772bfd
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718739657,v1=53c0ef4b741907bbd9569455304045a665892e52376a6fd574990e64cd00a965
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718746713,v1=3c2408eea766f12af7962a0698ca09c800b37ca234acd75fac436cd2cd15a72e
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718753809,v1=75c9453083443b1ef4e60d68f44ecab9edbb270aa6284907152d0bfc70836012
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718783793,v1=b908f7cf3aa19d56a4e8cc968405ba8603b90734799d34018b2e00dfb230c56a
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718799544,v1=d5117ce94ef5414f7eb0620391f44d276aa6f10453a83611a5019f768eb076be
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718810655,v1=1a14e275bfc758a6290d9d45978700dc149e822d026ae98dcb8adaabf4ea5e8a
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSfEjP7qxJGwScG1fq8XRx3",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718629483,
+  "data": {
+    "object": {
+      "id": "pi_3PSfEjP7qxJGwScG1AHheRwm",
+      "object": "payment_intent",
+      "amount": 15743,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15743,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSfEjP7qxJGwScG1AHheRwm_secret_M4pI3SqdGRFrguaJuJv5qzuNQ",
+      "confirmation_method": "automatic",
+      "created": 1718629481,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSfEjP7qxJGwScG13gelnCa",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSfEiP7qxJGwScGu3yaM4tG",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_GVi8V1rF3N1h74",
+    "idempotency_key": "b30bc1ef-b830-45a9-a9b7-2dbcc14319c2"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718870264,v1=d93c6c1ef2264e2d455b97ae606d3442d9da1bcdc9344f12485eb94f649929ca
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PSj6zP7qxJGwScG04qStUjU",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718644386,
+  "data": {
+    "object": {
+      "id": "pi_3PSj6zP7qxJGwScG00YRBhUN",
+      "object": "payment_intent",
+      "amount": 40000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 40000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PSj6zP7qxJGwScG00YRBhUN_secret_V4VdLvxh3wTFTLIaNQpcYqkkH",
+      "confirmation_method": "automatic",
+      "created": 1718644377,
+      "currency": "eur",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PSj6zP7qxJGwScG0aixRLym",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PSj6yP7qxJGwScGzy4gtHhl",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_FDu9XY59JHhBsa",
+    "idempotency_key": "d5bbc5af-d6d4-4b49-b44f-11b5c74b4158"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718886985,v1=4a458b9d32bfb56b4a7be4e3a3c700b753722fabbd02a122a1259e091a8b2112
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718898304,v1=ffd0034ffb4278c91918f3e96a8ff6601cb9433a665622fa33e3b394f597b818
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PT4yJP7qxJGwScG0BSicRQP",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718736078,
+  "data": {
+    "object": {
+      "id": "pi_3PT4yJP7qxJGwScG0w3N0DmX",
+      "object": "payment_intent",
+      "amount": 46800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 46800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PT4yJP7qxJGwScG0w3N0DmX_secret_mnnUPFt0D9lUDqavZMR2EExFm",
+      "confirmation_method": "automatic",
+      "created": 1718728407,
+      "currency": "eur",
+      "customer": "cus_QJiOUZHq0GyyDJ",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PT4xgP7qxJGwScGxGkp9z6o",
+      "last_payment_error": null,
+      "latest_charge": "py_3PT4yJP7qxJGwScG0f5ncVJi",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PT6xvP7qxJGwScGFq23NPDF",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null,
+          "setup_future_usage": "off_session"
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "157d227b-6589-47b5-bd29-75d0a4807be9"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718984183,v1=e99bc1bd2563d6edf862f017e4c737509878a67197f275fd3817e5b656902bd2
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718999847,v1=1cd162501c12d36123a5ca81b1e593c14f10bd727897aec212d4e8d6c3451603
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1718999864,v1=e64df128e9531b2b9facfeef81200de02d5e0b0d296c2300da5a13148d9915f6
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719003409,v1=82d5357f778ca6bd89a80c588bb81cc9bd74da6daca8fe8f51e08fc0cfdd327f
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719017803,v1=6fc688d3b409e5685e1e5636c10e2131ef2e534a2104170e7edc49241bef0d99
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719067320,v1=46ef38cd17ef3bfdba090984c50c78e818faf914de9ca4ba09ac90a7565c7631
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719142558,v1=1eec6837fae072f5f67536469ab212a951820ed41069af9976cb10f8952b24ef
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719142573,v1=152789ff93752087671a24e9e53260efd087a32fced8ebd1a47154df233a0abd
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719146183,v1=87e098aabf90782305c311d7598947d9db3d163248941a6c128817e1d32d2a0f
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719154549,v1=b9847e1700bc6cd961558119e34f768b63ef39df3967874f0b6e0ac7b203e85f
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719160666,v1=935c4f78a8e02ec8a69656fbdf4e3bee96f38ce12fb0faaf33bdad1cab889705
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719210976,v1=d424688a844d8eefb5b57f4578eabb334a3214d5a893cdea38fadc92b5bc3177
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUDVWP7qxJGwScG0r3JwnNG",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1718999846,
+  "data": {
+    "object": {
+      "id": "pi_3PUDVWP7qxJGwScG039IMMSs",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 10000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUDVWP7qxJGwScG039IMMSs_secret_8mocWEPwVdmJatFqNGBz5rc9L",
+      "confirmation_method": "automatic",
+      "created": 1718999546,
+      "currency": "eur",
+      "customer": "cus_QKtHRf3sx4uF6n",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUDVUP7qxJGwScGt04vIAp8",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUDVWP7qxJGwScG0hIJkSW0",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUDaKP7qxJGwScGSkibGn4S",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "26dd5f38-27b2-4128-8013-5b79a20b619e"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719241653,v1=5ef27ddee92d4d2f8d23e540715abf537f069e79f3611e571e55a8ed4d75bb1a
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719297916,v1=65b93dbfa1f13f1731d280b66b1146e9f36457e40e750e1e5dadb9b50de56e05
+)
+Array
+(
+    [message] => No signatures found matching the expected signature for payload
+    [line] => 28
+    [content] => {
+  "id": "evt_3PUbYoP7qxJGwScG1UwTtMRW",
+  "object": "event",
+  "api_version": "2023-10-16",
+  "created": 1719142557,
+  "data": {
+    "object": {
+      "id": "pi_3PUbYoP7qxJGwScG11nISght",
+      "object": "payment_intent",
+      "amount": 9000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 9000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_3PUbYoP7qxJGwScG11nISght_secret_SKwsxgF8S7V09ktI1Eb9Faz95",
+      "confirmation_method": "automatic",
+      "created": 1719092006,
+      "currency": "eur",
+      "customer": "cus_QLI897bZT2P2W7",
+      "description": "Payment for Invoice",
+      "invoice": "in_1PUbYnP7qxJGwScGRjxYEz4u",
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUbYoP7qxJGwScG1gHYVcGt",
+      "livemode": true,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUoi5P7qxJGwScGnSSzaG85",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "bancontact": {
+          "preferred_language": "en"
+        },
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic",
+          "setup_future_usage": "on_session"
+        },
+        "eps": {
+        },
+        "giropay": {
+        },
+        "ideal": {
+        },
+        "link": {
+          "persistent_token": null
+        },
+        "p24": {
+        }
+      },
+      "payment_method_types": [
+        "bancontact",
+        "card",
+        "eps",
+        "giropay",
+        "ideal",
+        "link",
+        "p24"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "376ef6df-3ed5-4e2a-a0f1-e66aa3c2d7d7"
+  },
+  "type": "payment_intent.succeeded"
+}
+    [sign] => t=1719383107,v1=fe7811e5a4ae2cddea775ec9fef35c53c1ec0c2b1b9936ff2bb7e339007a9a36
+)

@@ -1,0 +1,195 @@
+@use '../theme/fonts/darkline';
+@use '../theme/fonts/raleway';
+@use '../theme/viewport';
+
+.about {
+    background: var(--yellow-white);
+    display: grid;
+    grid-template:
+        "t"
+        "i"
+        "c"
+        "a";
+
+    &__title {
+        grid-area: t;
+        @include darkline.h3;
+        color: var(--blue);
+        text-align: center;
+        margin-bottom: 30px;
+        &:after, &:before {
+            content: '';
+            display: inline-block;
+            background: var(--blue);
+            width: 25px;
+            height: 1px;
+            margin: 0 7px;
+            vertical-align: 3px;
+        }
+    }
+
+    &__image {
+        grid-area: i;
+        height: 70vw;
+        position: relative;
+
+        &--main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        &--mark {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            right: 15px;
+            bottom: -50px;
+        }
+
+    }
+
+    &__content{
+        grid-area: c;
+        padding: 40px 15px 62px;
+
+        &--title {
+            @include raleway.h2;
+            color: var(--blue);
+            display: inline-block;
+        }
+
+        &--description {
+            @include raleway.h6;
+            color: var(--blue);
+            margin-top: 26px;
+            display: inline-block;
+            line-height: 22px;
+        }
+    }
+
+    &__adventures {
+        grid-area: a;
+        background: var(--green);
+        position: relative;
+        padding: 50px 0 200px;
+
+        &__title{
+            color: #fff;
+            @include raleway.h2;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        &__list {
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item{
+            color: #fff;
+            @include raleway.h6;
+            line-height: 22px;
+            padding: 10px 0 10px 60px;
+            position: relative;
+            width: 200px;
+
+            &:before {
+                content: '';
+                height: 36px;
+                width: 41px;
+                display: inline-block;
+                background-size: contain;
+                background: url("/asset/icon/star.svg") no-repeat center;
+                position: absolute;
+                left: 0px;
+            }
+        }
+
+        &:after {
+            content: '';
+            background: url("/asset/images/castle.png") no-repeat left bottom;
+            background-size: contain;
+            width: 260px;
+            height: 240px;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    @include  viewport.from-laptop {
+        grid-template:
+            "t i" 120px
+            "c i"
+            "a a";
+
+        &__image {
+            max-height: none;
+            height: auto;
+
+            &--mark {
+                left: 10px;
+                bottom: 10px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 0;
+            padding: 80px 60px 30px;
+            text-align: left;
+
+        }
+
+        &__content {
+            padding: 40px 60px;
+        }
+
+        &__adventures {
+            padding-bottom: 50px;
+            padding-left: 100px;
+
+            br {
+                display: none;
+            }
+
+            &:after {
+                width: 532px;
+                height: 496px;
+                left: -100px;
+                bottom: -39px;
+                clip: rect(0px, auto, 457px, 0);
+            }
+        }
+    }
+
+    @include  viewport.from-desktop {
+        &__adventures {
+            &:after {
+                width: 532px;
+                height: 496px;
+                left: -50px;
+                bottom: 0px;
+                clip: auto;
+            }
+        }
+    }
+    @include  viewport.from-fullscreen {
+        grid-template:
+            "t i" 80px
+            "c i"
+            "a i";
+
+        &__title {
+            padding: 50px 60px 30px 200px;
+        }
+
+        &__content {
+            padding: 40px 200px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use 'viewport';
+@use 'sass:list';
+
+$rows: 24;
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    @for $i from 1 through $rows {
+        & > .col-#{$i} {
+            flex-basis: calc(100% * #{$i} / var(--grid));
+        }
+    }
+    @for $i from 1 to list.length(viewport.$breakpoints_unit) {
+        $breakpoint: list.nth(viewport.$breakpoints_unit, $i);
+        @include viewport.media('>='+$breakpoint) {
+
+            @for $i from 1 through $rows {
+
+                & > .col-#{$breakpoint}-#{$i} {
+                    max-width: calc(100% * #{$i} / var(--grid));
+                }
+
+            }
+
+        }
+    }
+}
+
+@mixin install() {
+    --grid: #{$rows};
+}

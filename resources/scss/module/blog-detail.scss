@@ -1,0 +1,56 @@
+@use '../theme/fonts/raleway';
+@use '../theme/fonts/darkline';
+@use '../theme/color';
+@use '../theme/viewport';
+
+.blog-detail {
+    background: #ffffff;
+    padding: 50px 15px 50px;
+
+    &__title {
+        color: var(--blue);
+        padding-bottom: 20px;
+    }
+
+    &__description {
+        color: var(--blue);
+        padding-bottom: 30px;
+        @include raleway.raleway;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__article {
+        color: var(--blue);
+        @include raleway.raleway;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+
+        p, a {
+            color: var(--blue);
+            text-decoration: none;
+            @include raleway.raleway;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @include viewport.from-laptop {
+        padding: 80px 60px 80px;
+
+        &__title, &__description {
+            text-align: center;
+        }
+    }
+
+    @include viewport.from-desktop {
+        padding: 150px 70px 80px;
+
+    }
+}

@@ -1,0 +1,13 @@
+@use '../theme/fonts/raleway';
+
+.nav-menu {
+    display: flex;
+    column-gap: 50px;
+
+    &__item {
+        color: #fff;
+        @include raleway.h5;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}

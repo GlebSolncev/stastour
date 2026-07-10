@@ -1,0 +1,137 @@
+@use '../theme/fonts/darkline';
+@use '../theme/fonts/raleway';
+@use '../theme/viewport';
+
+.catalog-item {
+    padding-bottom: 68px;
+    box-sizing: border-box;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+    &__head {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__type {
+        @include raleway.raleway;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--yellow);
+        background: var(--green);
+        display: inline-block;
+        position: absolute;
+        padding: 3px 23px;
+        border-radius: 0 0 10px 0;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        &--yellow {
+            color: var(--green);
+            background: var(--yellow);
+            font-weight: normal;
+        }
+
+        &--orange {
+            color: var(--green);
+            background: var(--orange);
+            font-weight: normal;
+        }
+    }
+
+    &__title {
+        padding: 30px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 15px;
+
+        a {
+            color: var(--blue);
+            @include raleway.h4;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+
+    &__properties {
+        display: flex;
+        column-gap: 12px;
+    }
+
+    &__property {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        background: var(--blue);
+        color: #fff;
+        @include raleway.raleway;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 25px;
+        justify-content: center;
+        align-items: center;
+
+        &--car {
+            &:after{
+                content: '';
+                background: url(/asset/icon/car.svg) center no-repeat;
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+        }
+
+        &--foot {
+            &:after{
+                content: '';
+                background: url(/asset/icon/foot.svg) center no-repeat;
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+        }
+    }
+
+    &__description {
+        @include raleway.h6;
+        padding: 0 14px;
+        line-height: 20px;
+        color: var(--blue);
+    }
+
+    &__footer {
+        padding: 15px 14px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 15px;
+    }
+
+    &__price {
+        color: var(--blue);
+        @include raleway.raleway;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &__action {
+    }
+
+    @include viewport.from-laptop{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+    }
+
+    @include viewport.from-desktop{
+        padding-left: 13px;
+        padding-right: 13px;
+        padding-bottom: 45px;
+    }
+}

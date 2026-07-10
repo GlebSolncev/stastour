@@ -1,0 +1,95 @@
+@use "../viewport";
+
+
+@mixin raleway {
+    font-family: 'Raleway';
+}
+
+@mixin query($font-size: false, $line-height: false, $font-weight: false) {
+    @include raleway;
+}
+
+@mixin h1 {
+    @include raleway;
+    font-size: var(--raleway-h1-font-size);
+    line-height: var(--raleway-h1-line-height);
+    font-weight: var(--raleway-h1-weight);
+}
+
+@mixin h2 {
+    @include raleway;
+    font-size: var(--raleway-h2-font-size);
+    line-height: var(--raleway-h2-line-height);
+    font-weight: var(--raleway-h2-weight);
+}
+
+@mixin h4 {
+    @include raleway;
+    font-size: var(--raleway-h4-font-size);
+    line-height: var(--raleway-h4-line-height);
+    font-weight: var(--raleway-h4-weight);
+}
+
+@mixin h5 {
+    @include raleway;
+    font-size: var(--raleway-h5-font-size);
+    line-height: var(--raleway-h5-line-height);
+    font-weight: var(--raleway-h5-weight);
+}
+
+@mixin h6 {
+    @include raleway;
+    font-size: var(--raleway-h6-font-size);
+    line-height: var(--raleway-h6-line-height);
+    font-weight: var(--raleway-h6-weight);
+}
+
+@mixin install {
+    --raleway-h1-font-size: 26px;
+    --raleway-h1-line-height: 30px;
+    --raleway-h1-weight: 700;
+
+    --raleway-h2-font-size: 22px;
+    --raleway-h2-line-height: 26px;
+    --raleway-h2-weight: 700;
+
+    --raleway-h4-font-size: 16px;
+    --raleway-h4-line-height: 18px;
+    --raleway-h4-weight: 500;
+
+    --raleway-h5-font-size: 14px;
+    --raleway-h5-line-height: 16px;
+    --raleway-h5-weight: 300;
+
+    --raleway-h6-font-size: 12px;
+    --raleway-h6-line-height: 14px;
+    --raleway-h6-weight: 300;
+
+    @include viewport.from-laptop {
+        --raleway-h1-font-size: 46px;
+        --raleway-h1-line-height: 54px;
+
+        --raleway-h2-font-size: 28px;
+        --raleway-h2-line-height: 32px;
+
+        --raleway-h4-font-size: 22px;
+        --raleway-h4-line-height: 26px;
+
+        --raleway-h5-font-size: 18px;
+        --raleway-h5-line-height: 28px;
+
+        --raleway-h6-font-size: 14px;
+        --raleway-h6-line-height: 14px;
+    }
+
+    @include viewport.from-desktop {
+        --raleway-h1-font-size: 54px;
+        --raleway-h1-line-height: 63px;
+
+        --raleway-h2-font-size: 34px;
+        --raleway-h2-line-height: 40px;
+
+        --raleway-h4-font-size: 26px;
+        --raleway-h4-line-height: 30px;
+    }
+}

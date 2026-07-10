@@ -1,0 +1,20 @@
+@use "sass:map";
+
+$colors: (
+    'dark-blue': #202e38,
+    'blue': #1F3749,
+    'green': #1F9D7D,
+    'yellow': #FDCC5F,
+    'orange': #E86E29,
+    'yellow-white': #F4EEC5,
+);
+
+@function value($name) {
+    @return map.get($colors, $name);
+}
+
+@mixin install() {
+    @each $name, $value in $colors {
+        --#{$name}: #{$value};
+    }
+}

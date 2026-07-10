@@ -1,0 +1,193 @@
+@use '../theme/fonts/darkline';
+@use '../theme/fonts/raleway';
+@use '../theme/viewport';
+
+.reviews {
+    overflow: hidden;
+    background: var(--yellow-white);
+    position: relative;
+    padding-bottom: 85px;
+
+    &:before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: calc(100% - 80px);
+        height: 1px;
+        background: var(--blue);
+        left: 40px
+    }
+
+
+    &__title{
+        padding-top: 26px;
+        padding-bottom: 84px;
+        text-align: center;
+        @include raleway.raleway;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--blue);
+        line-height: 18px;
+
+        a {
+            text-decoration: underline;
+            @include raleway.raleway;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--blue);
+            display: block;
+            line-height: 18px;
+        }
+    }
+
+    &__hint{
+        @include darkline.h3;
+        text-align: center;
+        color: var(--blue);
+    }
+
+    &__rating{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2px;
+        padding-bottom: 37px;
+    }
+    &__star{
+        background: url("/asset/icon/rating.svg") center no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+
+    &__wrapper {
+        margin: 0 33px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__items{
+
+    }
+    &__item{
+        padding-bottom: 33px;
+    }
+    &__text{
+        color: var(--blue);
+        @include raleway.h5;
+        text-align: center;
+        line-height: 22px;
+    }
+    &__author{
+        color: var(--blue);
+        @include raleway.h5;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 20px;
+        padding-bottom: 33px;
+    }
+
+    .swiper-pagination-bullet {
+        background: var(--blue);
+        height: 8px;
+        width: 8px;
+        opacity: 1;
+
+        &-active {
+            background: #fff;
+        }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
+
+    @include viewport.from-laptop {
+
+        &:before{
+            width: 590px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__title {
+            a {
+                display: inline-block;
+            }
+        }
+
+        &__wrapper {
+            width: 570px;
+            margin: auto;
+        }
+
+        &__item {
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            background: var(--blue);
+            top: 33%;
+            border-radius: 2px;
+
+            &:after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: url('/asset/icon/arrow-right.svg') center no-repeat;
+                display: inline-block;
+                background-size: contain;
+            }
+        }
+
+        .swiper-button-next {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    @include viewport.from-desktop {
+        &__wrapper {
+            width: 1120px;
+            margin: auto;
+            box-sizing: border-box;
+            padding: 0 60px;
+        }
+
+        &__item {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        &__text {
+            text-align: left;
+        }
+
+        &__author {
+            text-align: right;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            width: 42px;
+            height: 42px;
+
+            &:after {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    @include viewport.from-fullscreen {
+        &__wrapper {
+            width: 1300px;
+        }
+    }
+}

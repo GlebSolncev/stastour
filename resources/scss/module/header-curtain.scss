@@ -1,0 +1,21 @@
+@use '../theme/fonts/darkline';
+@use '../theme/fonts/raleway';
+@use '../theme/viewport';
+
+
+.header-curtain{
+    &--checkout {
+        height: 80px;
+        background: url(/asset/tiles/curtain-checkout.png) center;
+    }
+
+    @include viewport.from-tablet {
+        height: 95px;
+        background: url(/asset/tiles/curtain-checkout-sm.png) center;
+    }
+
+    @include viewport.from-fullscreen {
+        height: 175px;
+        background: url(/asset/tiles/curtain-checkout-lg.png) center;
+    }
+}

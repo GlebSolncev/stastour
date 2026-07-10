@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('order', function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->integer('delivery_price')->default(0);
+            $table->date('timeslot_date')->nullable();
+            $table->integer('timeslot_id')->nullable();
+            $table->integer('timeslot_count')->default(0);
+            $table->boolean('is_paid')->default(false);
+
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email');
+
+            $table->string('restrictions')->nullable();
+            $table->string('comments')->nullable();
+
+            $table->string('country')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('postal_code')->nullable();
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('order');
+    }
+};

@@ -1,0 +1,90 @@
+
+$xs: 360px;
+$sm: 768px;
+$md: 1200px;
+$lg: 1450px;
+$xlg: 1920px;
+
+$breakpoints: (
+    'xs': $xs,
+    'sm': $sm,
+    'md': $md,
+    'lg': $lg,
+    'mobile': $xs,
+    'tablet': $sm,
+    'laptop': $md,
+    'desktop': $lg
+);
+
+$breakpoints_unit: ('xs', 'sm', 'md', 'lg', 'xlg');
+
+@import "../vendor/include-media";
+
+@mixin from ($bp){
+    @include media(">=#{$bp}") {
+        @content;
+    }
+}
+
+/**
+    @deprecated
+ */
+@mixin more ($bp){
+    @include from($bp) {
+        @content;
+    }
+}
+
+@mixin until ($bp){
+    @include media("<#{$bp}") {
+        @content;
+    }
+}
+
+@mixin from-tablet() {
+    @include from($xs) {
+        @content
+    }
+}
+
+@mixin from-laptop() {
+    @include from($sm) {
+        @content
+    }
+}
+
+@mixin from-desktop() {
+    @include from($md) {
+        @content
+    }
+}
+
+@mixin from-fullscreen() {
+    @include from($lg) {
+        @content
+    }
+}
+
+@mixin from-2x() {
+    @include from($xlg) {
+        @content
+    }
+}
+
+@mixin until-tablet {
+    @include until($sm) {
+        @content;
+    }
+}
+
+@mixin until-laptop {
+    @include until($md) {
+        @content;
+    }
+}
+
+@mixin until-desktop {
+    @include until($lg) {
+        @content;
+    }
+}

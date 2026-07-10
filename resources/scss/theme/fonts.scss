@@ -1,0 +1,35 @@
+@use "fonts/raleway";
+@use "fonts/darkline";
+
+h1, .h1 {
+    @include raleway.h1;
+}
+
+h2, .h2 {
+    @include raleway.h2;
+}
+
+h3, .h3 {
+    @include darkline.h3;
+}
+
+h4, .h4 {
+    @include raleway.h4;
+}
+
+h5, .h5 {
+    @include raleway.h5;
+}
+
+h6, p, a, label, span, .h6 {
+    @include raleway.h6;
+}
+
+@mixin install {
+    @include raleway.install;
+    @include darkline.install;
+}
+
+@mixin query($key, $value_set) {
+
+}

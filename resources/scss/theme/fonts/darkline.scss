@@ -1,0 +1,17 @@
+@use "../viewport";
+
+@mixin darkline {
+    font-family: 'Darkline';
+}
+
+@mixin h3 {
+    @include darkline;
+    font-size: var(--darkline-h3-font-size);
+    line-height: var(--darkline-h3-line-height);
+    font-weight: var(--darkline-h3-weight);
+}
+@mixin install {
+    --darkline-h3-font-size: 30px;
+    --darkline-h3-line-height: 61px;
+    --darkline-h3-weight: 400;
+}

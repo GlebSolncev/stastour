@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Darkline';
+    src:url('Darkline.ttf.woff') format('woff'),
+    url('Darkline.ttf.svg#Darkline') format('svg'),
+    url('Darkline.ttf.eot'),
+    url('Darkline.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
