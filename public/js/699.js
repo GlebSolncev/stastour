@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[699],{7699:(n,c,e)=>{e.r(c),e.d(c,{default:()=>t});var s=e(5408);const t=function(n){return new Promise((function(c,e){new s.xe("/api/discuss/confirm/",n,"POST").json().then((function(n){c(n)})).catch((function(n){e(n)}))}))}}}]);

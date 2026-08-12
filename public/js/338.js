@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[338],{6338:(n,e,t)=>{t.r(e),t.d(e,{default:()=>u});var c=t(5408);const u=function(n){return new Promise((function(e,t){new c.xe("/api/payment/stripe/",{order_id:n},"POST").json().then((function(n){e(n)})).catch((function(n){t(n)}))}))}}}]);

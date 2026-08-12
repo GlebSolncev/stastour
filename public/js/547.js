@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[547],{7547:(n,e,c)=>{c.r(e),c.d(e,{default:()=>a});var t=c(5408);const a=function(n){var e=n.code,c=n.page;return new Promise((function(n,a){new t.xe("/api/catalog/".concat(e,"/"),{page:c},"POST").html().then((function(e){n(e)})).catch((function(n){a(n)}))}))}}}]);

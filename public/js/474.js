@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[474],{1474:(n,e,c)=>{c.r(e),c.d(e,{default:()=>a});var t=c(5408);const a=function(n){var e=n.code;return new Promise((function(n,c){new t.xe("/api/language/".concat(e,"/"),{},"POST").json().then((function(n){location.reload()})).catch((function(n){c(n)}))}))}}}]);

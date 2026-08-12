@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[946],{2946:(n,t,e)=>{e.r(t),e.d(t,{default:()=>u});var c=e(5408);const u=function(n){return new Promise((function(t,e){new c.xe("/api/catalog/fetch/",{filters:n},"POST").html().then((function(n){t(n)})).catch((function(n){e(n)}))}))}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[406],{5406:(n,e,t)=>{t.r(e),t.d(e,{default:()=>c});var u=t(5408);const c=function(n){return new Promise((function(e,t){new u.xe("/api/basket/add/tour/",n,"POST").json().then((function(n){e(n)})).catch((function(n){t(n)}))}))}}}]);

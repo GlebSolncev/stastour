@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[13],{1013:(n,c,e)=>{e.r(c),e.d(c,{default:()=>u});var t=e(5408);const u=function(n){return new Promise((function(c,e){new t.xe("/api/checkout/confirm/",n,"POST").json().then((function(n){c(n)})).catch((function(n){e(n)}))}))}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[322],{2322:(n,e,t)=>{t.r(e),t.d(e,{default:()=>u});var c=t(5408);const u=function(n){var e=n.page;return new Promise((function(n,t){new c.xe("/api/blog/",{page:e},"POST").html().then((function(e){n(e)})).catch((function(n){t(n)}))}))}}}]);

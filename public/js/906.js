@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[906],{1906:(n,e,t)=>{t.r(e),t.d(e,{default:()=>a});var c=t(5408);const a=function(n){var e=n.code,t=n.data;return new Promise((function(n,a){new c.xe("/api/modal/create/".concat(e,"/"),t,"POST").html().then((function(e){n(e)})).catch((function(n){a(n)}))}))}}}]);

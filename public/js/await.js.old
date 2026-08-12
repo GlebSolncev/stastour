@@ -1,0 +1,39 @@
+class Await {
+    #waiters = {};
+    #skip = [];
+
+    constructor() {
+        // Если window.await был массивом имен, обрабатываем их через push
+        if (Array.isArray(window.await)) {
+            window.await.forEach((name) => {
+                this.push(name);
+            });
+        }
+        // Перезаписываем глобальную переменную текущим экземпляром
+        window.await = this;
+    }
+
+    push(name) {
+        console.log("[ready]", name);
+        this.#skip.push(name);
+
+        // Если кто-то уже вызвал wait(name), вызываем резолв промиса
+        if (this.#waiters[name]) {
+            this.#waiters[name]();
+            delete this.#waiters[name]; // Очищаем, чтобы не висело в памяти
+        }
+    }
+
+    async wait(name) {
+        // Если событие уже произошло, просто выходим
+        if (this.#skip.includes(name)) return;
+
+        // Иначе создаем промис и сохраняем его резолв
+        return new Promise((resolve) => {
+            this.#waiters[name] = resolve;
+        });
+    }
+}
+
+// Инициализация
+window.await = new Await();
