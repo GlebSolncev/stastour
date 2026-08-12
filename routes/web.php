@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\MainpageController::class, 'show'])->name('mainpage');
 Route::get('/tour/{tour}/', [\App\Http\Controllers\TourController::class, 'detail']);
 Route::get('/checkout/', [\App\Http\Controllers\CheckoutController::class, 'show']);
+Route::get('/checkout/payment/success', [\App\Http\Controllers\PaymentController::class, 'checkoutSuccess'])
+    ->name('checkout.payment.success');
 Route::get('/blog/', [\App\Http\Controllers\BlogController::class, 'list']);
 Route::get('/blog/{code}', [\App\Http\Controllers\BlogController::class, 'detail']);
 

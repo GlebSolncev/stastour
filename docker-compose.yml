@@ -11,9 +11,11 @@ services:
         ports:
             - '127.0.0.1:4038:80'
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
+            - '3000:3000'
         environment:
             WWWUSER: '${WWWUSER}'
             LARAVEL_SAIL: 1
+            QUEUE_CONNECTION: database
             XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
             XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
             IGNITION_LOCAL_SITES_PATH: '${PWD}'
@@ -23,6 +25,21 @@ services:
             - sail
         depends_on:
             - mysql
+    queue-worker:
+        image: sail-8.2/app
+        command: php artisan queue:work database --queue=bokun-imports --sleep=3 --tries=1 --timeout=900 --max-time=3600
+        restart: unless-stopped
+        environment:
+            WWWUSER: '${WWWUSER}'
+            LARAVEL_SAIL: 1
+            QUEUE_CONNECTION: database
+        volumes:
+            - '.:/var/www/html'
+        networks:
+            - sail
+        depends_on:
+            mysql:
+                condition: service_healthy
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:

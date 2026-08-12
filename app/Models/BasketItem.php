@@ -25,7 +25,7 @@ class BasketItem extends Model
 
     protected $casts = [
         'quantity' => 'int',
-        'price' => 'int',
+        'price' => 'float',
         'is_tour' => 'boolean',
         'ext_id' => 'int',
     ];
@@ -83,6 +83,32 @@ class BasketItem extends Model
         if($properties = static::fillTourProperties($timeslotId, $timeslotDate, $adultQuantity, $kidQuantity, $kidInfo)) {
             $item->properties()->saveMany($properties);
         }
+
+        return $item->id;
+    }
+
+    public static function addBokunTour(Tours $tour, string $date, int $startTimeId, array $pricing, float $total, string $currency): int
+    {
+        $basket = Basket::loadBasket();
+        $basket->deleteExistsTours();
+
+        $item = static::create([
+            'basket_id' => $basket->id,
+            'ext_id' => $tour->id,
+            'is_tour' => true,
+            'price' => $total,
+            'quantity' => 1,
+        ]);
+
+        $properties = [
+            new BasketProperty(['key' => 'timeslot_id', 'value' => $startTimeId]),
+            new BasketProperty(['key' => 'timeslot_date', 'value' => $date]),
+            new BasketProperty(['key' => 'bokun_id', 'value' => $tour->bokun_id]),
+            new BasketProperty(['key' => 'bokun_pricing', 'value' => json_encode($pricing)]),
+            new BasketProperty(['key' => 'bokun_total', 'value' => $total]),
+            new BasketProperty(['key' => 'bokun_currency', 'value' => $currency]),
+        ];
+        $item->properties()->saveMany($properties);
 
         return $item->id;
     }

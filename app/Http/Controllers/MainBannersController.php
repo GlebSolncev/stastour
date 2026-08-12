@@ -15,7 +15,7 @@ class MainBannersController extends Controller
         foreach($banners as $banner) {
             $entity = (object)[
                 'image' => (object)[
-                    'src' => Attachment::find($banner->image)->url()
+                    'src' => null,//Attachment::find($banner->image)->url()
                 ],
                 'title' => $banner->name,
                 'description' => str_replace("\n", "<br/>", $banner->description),

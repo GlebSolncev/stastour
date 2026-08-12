@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Tour\PricingCategoryTourController;
 use App\Models\Tours;
+use App\Services\BokunService;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Orchid\Attachment\Models\Attachment;
 
@@ -13,7 +16,6 @@ class TourController extends Controller
 
         /** @var Tours $tour */
         if ($tour = Tours::query()->where('code', '=', $code)->first()) {
-
             return view('page.tour', [
                 'tour' => (object)[
                     'title' => $tour->name,
@@ -59,6 +61,7 @@ class TourController extends Controller
         $iterator = Tours::query()
             ->select(['id', 'name'])
             ->where('type_tour', '=', $type)
+            ->whereNull('bokun_id')
             ->get();
 
         foreach ($iterator as $tour) {
@@ -100,8 +103,8 @@ class TourController extends Controller
     public static function getFile(?string $source): ?string
     {
         if(isset($source)) {
-            $fileId = json_decode($source)[0];
-            if($file = Attachment::find($fileId)) {
+            $fileId = json_decode($source);
+            if($fileId && $file = Attachment::find(Arr::first($fileId))) {
                 return $file->url();
             }
         }
@@ -113,6 +116,10 @@ class TourController extends Controller
     {
         $entity = [
             'id' => $tour->id,
+            'bokun_id' => $tour->bokun_id,
+            'pricingCategory' => $tour->bokun_id
+                ? self::getPricinaCategory((int) $tour->bokun_id)
+                : [],
             'image' => (object)[
                 'type' => $tour->type_tour,
                 'color' => 'green',
@@ -135,12 +142,19 @@ class TourController extends Controller
             'person_count' => $tour->person_count,
             'price' => $tour->price,
             'map' => static::getFile($tour->map_file),
-            'checkout' => static::getCheckoutData($tour)
+            'checkout' => $tour->bokun_id
+                ? (object) ['group' => [], 'calendar' => null]
+                : static::getCheckoutData($tour)
         ];
 
         if ($gallery = static::getTourGallery($tour)) {
             $entity['gallery'] = $gallery;
         }
         return (object)$entity;
+    }
+
+    public static function getPricinaCategory(int $id)
+    {
+        return app(BokunService::class)->getPricingList($id);
     }
 }

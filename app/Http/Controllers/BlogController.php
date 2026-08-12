@@ -112,10 +112,7 @@ class BlogController extends Controller
         if ($item['image']) {
 
             $result['image'] = (object)[
-                'src' => Attachment::query()
-                    ->where('id', $item['image'])
-                    ->first()
-                    ->url()
+                'src' => null
             ];
         }
 

@@ -18,14 +18,66 @@ class ToursEditLayout extends Rows
 
     protected function fields(): iterable
     {
+        $tour = $this->query->toArray()['tour'];
+
+        $name = Input::make('name')
+            ->type('text')
+            ->max(255)
+            ->required()
+            ->title(__('Name'))
+            ->placeholder(__('Name'))
+            ->value($tour->name);
+
+        $id = Input::make('id')
+            ->type('hidden')
+            ->required()
+            ->value($tour->id);
+
+        $images = Upload::make('image')
+            ->value(static::getImagesIds($tour->image))
+            ->required()
+            ->acceptedFiles('image/*,.avif,.avifs')
+            ->title(__('Image gallery'))
+            ->help($tour->bokun_id
+                ? __('For Bokun tours existing images are preserved; you can add new images.')
+                : '')
+            ->maxFiles(50);
+
+        $previewPhoto = Upload::make('preview_photo')
+            ->value(json_decode($tour->preview_photo ?: '[]', true) ?: [])
+            ->acceptedFiles('image/*,.avif,.avifs')
+            ->title(__('Preview Photo'))
+            ->maxFiles(1);
+
+        $detailPhoto = Upload::make('detail_photo')
+            ->value(json_decode($tour->detail_photo ?: '[]', true) ?: [])
+            ->acceptedFiles('image/*,.avif,.avifs')
+            ->title(__('Detail Photo'))
+            ->maxFiles(1);
+
+        if ($tour->bokun_id) {
+            return [
+                Input::make('source')
+                    ->type('text')
+                    ->readonly()
+                    ->title(__('Source'))
+                    ->value('Bokun #' . $tour->bokun_id),
+                $name,
+                $id,
+                Select::make('type_tour')
+                    ->required()
+                    ->options($this->query->toArray()['tour_type'])
+                    ->title(__('Tour type'))
+                    ->value($tour->type_tour)
+                    ->help(__('Bokun privateActivity is used initially; you can override it here.')),
+                $previewPhoto,
+                $detailPhoto,
+                $images,
+            ];
+        }
+
         return [
-            Input::make('name')
-                ->type('text')
-                ->max(255)
-                ->required()
-                ->title(__('Name'))
-                ->placeholder(__('Name'))
-                ->value($this->query->toArray()['tour']->name),
+            $name,
 
             Input::make('code')
                 ->type('text')
@@ -36,11 +88,14 @@ class ToursEditLayout extends Rows
                 ->placeholder(__('Code'))
                 ->value($this->query->toArray()['tour']->code),
 
-            Input::make('id')
-                ->type('hidden')
-                ->max(255)
-                ->required()
-                ->value($this->query->toArray()['tour']->id),
+            Input::make('bokun_id')
+                ->type('number')
+                ->min(1)
+                ->title(__('Bokun experience ID'))
+                ->help(__('Fill this field to enable Bokun availability and booking on the tour page.'))
+                ->value($this->query->toArray()['tour']->bokun_id),
+
+            $id,
 
             TextArea::make('preview_text')
                 ->title('Preview text')
@@ -55,21 +110,11 @@ class ToursEditLayout extends Rows
                 ->lang('en')
                 ->value($this->query->toArray()['tour']->description),
 
-            Upload::make('preview_photo')
-                ->value(json_decode($this->query->toArray()['tour']->preview_photo))
-                ->title(__('Preview Photo'))
-                ->maxFiles(1),
+            $previewPhoto,
 
-            Upload::make('detail_photo')
-                ->value(json_decode($this->query->toArray()['tour']->detail_photo))
-                ->title(__('Detail Photo'))
-                ->maxFiles(1),
+            $detailPhoto,
 
-            Upload::make('image')
-                ->value(static::getImagesIds($this->query->toArray()['tour']->image))
-                ->required()
-                ->title(__('Image gallery'))
-                ->maxFiles(10),
+            $images,
 
             Select::make('type_tour')
                 ->required()

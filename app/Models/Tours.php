@@ -16,6 +16,7 @@ class Tours extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        'bokun_id',
         'name',
         'name_fr',
         'name_es',

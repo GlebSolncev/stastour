@@ -93,11 +93,56 @@
                     <input id="restrictions" name="restrictions" type="text" class="checkout__row-input">
                 </div>
 
+                @if($checkout->is_bokun)
+                <div class="checkout__row">
+                    <label for="pickup_place_description" class="checkout__row-label">Pickup location*:</label>
+                    <input id="pickup_place_description" name="pickup_place_description" type="text"
+                           class="checkout__row-input" maxlength="1000" required
+                           placeholder="Hotel name and full address">
+                </div>
+
+                <div class="checkout__row">
+                    <label for="dropoff_place_description" class="checkout__row-label">Drop-off location*:</label>
+                    <input id="dropoff_place_description" name="dropoff_place_description" type="text"
+                           class="checkout__row-input" maxlength="1000" required
+                           placeholder="Hotel name and full address">
+                </div>
+                @endif
+
                 <div class="checkout__row">
                     <label for="comments" class="checkout__row-label">Comments (time zone, how to contact,
                         etc.):</label>
                     <textarea id="comments" name="comments" type="text" class="checkout__row-textarea"></textarea>
                 </div>
+
+                @foreach($checkout->passengers as $index => $passenger)
+                    <div class="checkout__passenger">
+                        <p class="checkout__head">Passenger {{ $index + 1 }}:</p>
+                        <input type="hidden" name="passengers[{{ $index }}][pricing_category_id]"
+                               value="{{ $passenger['pricing_category_id'] }}">
+                        <div class="checkout__row">
+                            <label class="checkout__row-label" for="passenger_{{ $index }}_first_name">First name*:</label>
+                            <input class="checkout__row-input" id="passenger_{{ $index }}_first_name"
+                                   name="passengers[{{ $index }}][first_name]" type="text" required>
+                        </div>
+                        <div class="checkout__row">
+                            <label class="checkout__row-label" for="passenger_{{ $index }}_last_name">Last name*:</label>
+                            <input class="checkout__row-input" id="passenger_{{ $index }}_last_name"
+                                   name="passengers[{{ $index }}][last_name]" type="text" required>
+                        </div>
+                        <div class="checkout__row">
+                            <label class="checkout__row-label" for="passenger_{{ $index }}_email">Email*:</label>
+                            <input class="checkout__row-input" id="passenger_{{ $index }}_email"
+                                   name="passengers[{{ $index }}][email]" type="email" required>
+                        </div>
+                        <div class="checkout__row checkout__row--mb30">
+                            <label class="checkout__row-label" for="passenger_{{ $index }}_date_of_birth">Date of birth*:</label>
+                            <input class="checkout__row-input" id="passenger_{{ $index }}_date_of_birth"
+                                   name="passengers[{{ $index }}][date_of_birth]" type="date"
+                                   max="{{ now()->subDay()->format('Y-m-d') }}" required>
+                        </div>
+                    </div>
+                @endforeach
 
             @endif
 
@@ -134,7 +179,30 @@
                         conditions* </a></label>
             </div>
 
-            <button class="checkout__submit button button--fill" js-element="submit" type="button">Pay now</button>
+            <p class="checkout__error" js-element="error" style="display:none;color:red;font-weight:700"></p>
+            <button class="checkout__submit button button--fill" js-element="submit" type="button" aria-busy="false">
+                <span class="checkout__submit-label">Pay now</span>
+                <span class="checkout__submit-loading" aria-hidden="true">
+                    <span class="checkout__submit-spinner"></span>
+                    Processing...
+                </span>
+            </button>
+
+            <style>
+                .checkout__submit-loading { display: none; align-items: center; justify-content: center; gap: .6rem; }
+                .checkout__submit.is-loading .checkout__submit-label { display: none; }
+                .checkout__submit.is-loading .checkout__submit-loading { display: inline-flex; }
+                .checkout__submit.is-loading { cursor: wait; opacity: .75; }
+                .checkout__submit-spinner {
+                    width: 1.1rem;
+                    height: 1.1rem;
+                    border: 2px solid rgba(255, 255, 255, .45);
+                    border-top-color: #fff;
+                    border-radius: 50%;
+                    animation: checkout-submit-spin .7s linear infinite;
+                }
+                @keyframes checkout-submit-spin { to { transform: rotate(360deg); } }
+            </style>
 
         </form>
     </div>

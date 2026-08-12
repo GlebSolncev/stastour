@@ -38,6 +38,8 @@ class TourCheckout {
 
     events() {
 
+        if (!this.current_tour) return;
+
         this.current_tour.js_controller.element.addEventListener('change', (e) => {
             this.changeCurrentTour(e.detail.value);
         });

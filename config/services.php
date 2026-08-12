@@ -32,7 +32,7 @@ return [
     ],
 
     'bokun' => [
-        'base_url' => env('BOKUN_API_BASE_URL'),
+        'url' => env('BOKUN_API_BASE_URL'),
         'access_key' => env('BOKUN_ACCESS_KEY'),
         'secret_key' => env('BOKUN_SECRET_KEY'),
     ],

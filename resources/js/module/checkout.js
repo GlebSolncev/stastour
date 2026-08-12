@@ -20,29 +20,48 @@ class Checkout {
 
         const form_element = references['form'];
         const submit = references['submit'];
+        const errorElement = references['error'];
 
-        submit.addEventListener('click', (e) => {
+        const setSubmitting = (submitting) => {
+            submit.disabled = submitting;
+            submit.classList.toggle('is-loading', submitting);
+            submit.setAttribute('aria-busy', submitting ? 'true' : 'false');
+        };
+
+        submit.addEventListener('click', async (e) => {
+            if (submit.disabled) return;
+
             if (!form_element.checkValidity()) {
                 form_element.reportValidity();
                 return;
             }
 
-            route('checkout.confirm', new FormData(form_element)).then((response) => {
-                if (response.done) {
+            setSubmitting(true);
+            errorElement.style.display = 'none';
+            errorElement.textContent = '';
 
-                    route('payment.process', response.data.id).then((payment) => {
-                        if (payment.url) {
-                            window.location.href = payment.url;
-                        } else {
-                            modal.show('order-success', {id: response.data.id}, {
-                                'done': () => {
-                                    location.href = '/'
-                                }
-                            });
-                        }
-                    })
+            try {
+                const response = await route('checkout.confirm', new FormData(form_element));
+                if (!response.done || !response.data?.id) {
+                    throw new Error(response.message || 'Unable to create booking. Please try again.');
                 }
-            })
+
+                const payment = await route('payment.process', response.data.id);
+                if (payment.url) {
+                    window.location.assign(payment.url);
+                    return;
+                }
+
+                modal.show('order-success', {id: response.data.id}, {
+                    'done': () => {
+                        location.href = '/'
+                    }
+                });
+            } catch (error) {
+                errorElement.textContent = error.message || 'Unable to create booking. Please try again.';
+                errorElement.style.display = 'block';
+                setSubmitting(false);
+            }
 
         })
     }

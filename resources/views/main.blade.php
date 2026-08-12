@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @include('layout.header')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body class="antialiased {{isset($theme) ? 'theme--'.$theme : null}}">
     <div class="static">

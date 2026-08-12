@@ -15,18 +15,25 @@ class BasketController extends Controller
     public function addTour(Request $request)
     {
 
-        $id = $request->get('id');
-        $qty = $request->get('qty');
-        $info = $request->get('info');
-        $timeslot = $request->get('timeslot');
+        $data = $request->validate([
+            'id' => ['required', 'integer', 'exists:tours,id'],
+            'qty.adults' => ['required', 'integer', 'min:1', 'max:99'],
+            'qty.kids' => ['required', 'integer', 'min:0', 'max:99'],
+            'info.kids_info' => ['nullable', 'string', 'max:1000'],
+            'timeslot.id' => ['required', 'integer', 'exists:timeslot,id'],
+            'timeslot.date' => ['required', 'date_format:Y-m-d', 'after_or_equal:today'],
+        ]);
+
+        $tour = Tours::findOrFail($data['id']);
+        abort_if($tour->bokun_id, 422, 'Bokun tours must use Bokun checkout.');
 
         $basketItemId = \App\Models\BasketItem::addTour(
-            \App\Models\Tours::find($id),
-            $timeslot['id'],
-            $timeslot['date'],
-            $qty['adults'],
-            $qty['kids'],
-            $info['kids_info']
+            $tour,
+            $data['timeslot']['id'],
+            $data['timeslot']['date'],
+            $data['qty']['adults'],
+            $data['qty']['kids'],
+            $data['info']['kids_info'] ?? ''
         );
 
         return [
@@ -35,6 +42,46 @@ class BasketController extends Controller
                 'id' => $basketItemId
             ]
         ];
+    }
+
+    public function addBokunTour(Request $request, \App\Services\Bokun\BokunBookingService $bokun)
+    {
+        $data = $request->validate([
+            'tour_id' => ['required', 'integer'],
+            'date' => ['required', 'date_format:Y-m-d', 'after_or_equal:today'],
+            'start_time_id' => ['required', 'integer'],
+            'pricing' => ['required', 'array', 'min:1'],
+            'pricing.*' => ['required', 'integer', 'min:1', 'max:99'],
+        ]);
+
+        $tour = Tours::where('bokun_id', $data['tour_id'])->firstOrFail();
+        $passengers = [];
+        foreach ($data['pricing'] as $categoryId => $quantity) {
+            for ($i = 0; $i < $quantity; $i++) {
+                $passengers[] = ['pricingCategoryId' => (int) $categoryId];
+            }
+        }
+
+        [$quotes] = $bokun->shoppingCart(
+            (int) $tour->bokun_id,
+            $data['date'],
+            [(int) $data['start_time_id']],
+            $passengers
+        );
+        $quote = $quotes[0] ?? [];
+        $option = data_get($quote, 'options.0');
+        abort_unless($option, 422, 'The selected Bokun slot is no longer available.');
+
+        BasketItem::addBokunTour(
+            $tour,
+            $data['date'],
+            (int) $data['start_time_id'],
+            $data['pricing'],
+            (float) data_get($option, 'amount', 0),
+            (string) data_get($option, 'currency', 'EUR')
+        );
+
+        return response()->json(['checkout_url' => url('/checkout/')]);
     }
 
     public static function getProperties(BasketItem $item): ?array
@@ -72,7 +119,9 @@ class BasketController extends Controller
                 'is_tour' => true,
                 'quantity' => $item->quantity,
                 'price' => $item->price,
-                'total_price' => $item->quantity * $item->price,
+                'total_price' => isset($properties['bokun_total'])
+                    ? (float) $properties['bokun_total']
+                    : $item->quantity * $item->price,
                 'properties' => $properties
             ];
 

@@ -23,6 +23,12 @@ class ToursCreateLayout extends Rows
                 ->title(__('Name'))
                 ->placeholder(__('Name')),
 
+            Input::make('bokun_id')
+                ->type('number')
+                ->min(1)
+                ->title(__('Bokun experience ID'))
+                ->help(__('Optional. Enables Bokun availability and booking for this tour.')),
+
             TextArea::make('preview_text')
                 ->title('Preview text')
                 ->required()
@@ -33,16 +39,19 @@ class ToursCreateLayout extends Rows
                 ->title('Description'),
 
             Upload::make('preview_photo')
+                ->acceptedFiles('image/*,.avif,.avifs')
                 ->title(__('Preview Photo'))
                 ->required()
                 ->maxFiles(1),
 
             Upload::make('detail_photo')
+                ->acceptedFiles('image/*,.avif,.avifs')
                 ->title(__('Detail Photo'))
                 ->required()
                 ->maxFiles(1),
 
             Upload::make('image')
+                ->acceptedFiles('image/*,.avif,.avifs')
                 ->title(__('Image gallery'))
                 ->required()
                 ->maxFiles(10),

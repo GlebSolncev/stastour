@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\CatalogSectionController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\Tour\Calendar\ShowCalendarController;
+use App\Http\Controllers\Tour\ShoppingCartTourController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +24,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('show-calendar/{tourId}/{month}', ShowCalendarController::class);
+Route::post('cart', ShoppingCartTourController::class);
 
 Route::group(['middleware' => ['web']], function () {
+    Route::post('/bokun/checkout', [BasketController::class, 'addBokunTour']);
     Route::post('/language/{code}', function (Request $request, Response $response, string $code) {
         return json_encode(['echo' => $code]);
     });
@@ -44,4 +49,3 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::post('/payment/stripe', [PaymentController::class, 'stripeCreate']);
 Route::any('/payments/info', [PaymentController::class, 'stripeSuccess']);
-

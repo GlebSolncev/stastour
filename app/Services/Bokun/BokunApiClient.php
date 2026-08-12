@@ -14,7 +14,7 @@ class BokunApiClient
 
     public function __construct()
     {
-        $this->baseUrl = rtrim(config('services.bokun.base_url'), '/');
+        $this->baseUrl = rtrim(config('services.bokun.url'), '/');
         $this->accessKey = config('services.bokun.access_key');
         $this->secretKey = config('services.bokun.secret_key');
     }
@@ -68,7 +68,7 @@ class BokunApiClient
                     'status' => $response->status(),
                     'body'   => $response->body()
                 ]);
-                throw new Exception("Bokun API error: {$response->status()} | Body: {$response->body()}");
+                throw new Exception($response->body());
             }
 
             return $response->json();

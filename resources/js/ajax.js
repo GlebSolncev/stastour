@@ -43,7 +43,13 @@ export class AjaxProcessor {
         const formData = this.getFormData();
 
         let url = this.url;
-        const data = {method: this.method};
+        const data = {
+            method: this.method,
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        };
 
         if (['GET', 'HEAD'].includes(this.method)) {
             const query = new URLSearchParams(formData).toString();
@@ -60,12 +66,20 @@ export class AjaxProcessor {
     json() {
         return new Promise((resolve, reject) => {
             this.request()
-                .then((response) => {
+                .then(async (response) => {
+                    const body = await response.text();
+                    let answer;
+                    try {
+                        answer = JSON.parse(body);
+                    } catch (error) {
+                        throw new Error(`Server returned ${response.status} instead of JSON`);
+                    }
 
-                    return response.json()
-                        .then((answer) => {
-                            resolve(answer);
-                        })
+                    if (!response.ok) {
+                        throw new Error(answer.message || `Request failed with status ${response.status}`);
+                    }
+
+                    resolve(answer);
                 })
                 .catch(reject)
         })

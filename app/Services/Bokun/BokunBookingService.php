@@ -11,6 +11,247 @@ class BokunBookingService
         private readonly BokunApiClient $apiClient
     ) {}
 
+
+    public function shoppingCart(int $id, $date, array $startTimeId, array $pricingCategoryBookings)
+    {
+//        $sessionId = session()->getId();
+
+        $activities = [];
+        $error = [];
+        foreach($startTimeId as $startTime) {
+            try {
+                $activities[] = $this->apiClient->request('POST', "/checkout.json/options/booking-request", [
+                    'activityBookings' => [
+                        [
+                            'activityId' => $id,
+                            'date' => $date,
+                            'startTimeId' => $startTime,
+                            'passengers' => $pricingCategoryBookings,
+                        ]
+                    ]
+                ]);
+            }catch (\Throwable $exception) {
+                $error[] = $startTime;
+            }
+//            $activities[] = $this->apiClient->request('POST', "/checkout.json/options/booking-request", [
+//                'activityBookings' => [
+//                    [
+//                        'activityId' => $id,
+//                        'date' => $date,
+//                        'startTimeId' => $startTime,
+//                        'passengers' => $pricingCategoryBookings,
+//                    ]
+//                ]
+//            ]);
+        }
+
+        return [
+            $activities,
+            $error
+        ];
+
+//        return $this->apiClient->request('POST', "/checkout.json/options/booking-request", [
+//            'activityBookings' => $activities
+//        ]);
+    }
+
+    public function reserveForExternalPayment(array $directBooking, int $orderId): array
+    {
+        $optionsResponse = $this->apiClient->request(
+            'POST',
+            '/checkout.json/options/booking-request',
+            $directBooking
+        );
+
+        $option = collect($optionsResponse['options'] ?? [])->first(function (array $option) {
+            return in_array(
+                'RESERVE_FOR_EXTERNAL_PAYMENT',
+                data_get($option, 'paymentMethods.allowedMethods', []),
+                true
+            );
+        });
+
+        if (!$option) {
+            throw new Exception('Bokun channel does not allow RESERVE_FOR_EXTERNAL_PAYMENT.');
+        }
+
+        return $this->apiClient->request('POST', '/checkout.json/submit', [
+            'checkoutOption' => $option['type'],
+            'paymentMethod' => 'RESERVE_FOR_EXTERNAL_PAYMENT',
+            'source' => 'DIRECT_REQUEST',
+            'directBooking' => $directBooking,
+            'uti' => data_get($option, 'paymentMethods.uti'),
+            'sendNotificationToMainContact' => false,
+            'showPricesInNotification' => false,
+        ]);
+    }
+
+    public function confirmReserved(string $confirmationCode, float $amount, string $currency, string $transactionId): array
+    {
+        return $this->apiClient->request(
+            'POST',
+            '/checkout.json/confirm-reserved/' . rawurlencode($confirmationCode),
+            [
+                'amount' => $amount,
+                'currency' => $currency,
+                'transactionDetails' => [
+                    'transactionDate' => gmdate('Y-m-d H:i:s'),
+                    'transactionId' => $transactionId,
+                ],
+            ]
+        );
+    }
+
+    public function abortReserved(string $confirmationCode): array
+    {
+        return $this->apiClient->request(
+            'POST',
+            '/booking.json/' . rawurlencode($confirmationCode) . '/abort-reserved',
+            []
+        );
+    }
+
+    public function syncReservationDetails(array $reservation, array $details): void
+    {
+        $confirmationCode = (string) data_get($reservation, 'booking.confirmationCode');
+        if ($confirmationCode === '') {
+            throw new Exception('Bokun reservation has no confirmation code.');
+        }
+
+        $this->apiClient->request(
+            'POST',
+            '/booking.json/update-customer/' . rawurlencode($confirmationCode),
+            [
+                'firstName' => $details['first_name'],
+                'lastName' => $details['last_name'],
+                'email' => $details['email'],
+                'phoneNumber' => $details['phone'],
+            ]
+        );
+
+        $activityBookingId = data_get($reservation, 'booking.activityBookings.0.bookingId');
+        $pricingBookings = data_get($reservation, 'booking.activityBookings.0.pricingCategoryBookings', []);
+        if (!$activityBookingId || !$pricingBookings) {
+            return;
+        }
+
+        $actions = [];
+        foreach (array_values($details['passengers'] ?? []) as $index => $passenger) {
+            $pricingBookingId = data_get($pricingBookings, $index . '.id');
+            if (!$pricingBookingId) {
+                continue;
+            }
+
+            $actions[] = [
+                'type' => 'EditParticipantAction',
+                'activityBookingId' => (int) $activityBookingId,
+                'pricingCategoryBookingId' => (int) $pricingBookingId,
+                'pricingCategoryBooking' => [
+                    'passengerInfo' => [
+                        'firstName' => $passenger['first_name'],
+                        'lastName' => $passenger['last_name'],
+                        'email' => $passenger['email'],
+                        'dateOfBirth' => $passenger['date_of_birth'],
+                    ],
+                ],
+            ];
+        }
+
+        if ($actions) {
+            $this->apiClient->request('POST', '/booking.json/edit', $actions);
+        }
+    }
+
+
+
+    public function getCheckout(int $id, $date, int $startTimeId){
+        return $this->apiClient->request('POST', "/checkout.json/options/booking-request", [
+//            'directBooking' => [
+            'activityBookings' => [
+                [
+                    'activityId' => $id,
+                    'date' => $date,
+                    'startTimeId' => $startTimeId,
+                    'passengers' => [
+                        [
+                            'pricingCategoryId' => 1083344,
+                            'groupSize' => 1
+                        ]
+                    ],
+//                        'pricingCategoryBookings' => [
+//                            [
+//                                'pricingCategoryId' => 1083344,
+//                                'extras' => []
+//                            ],
+//                            [
+//                                'pricingCategoryId' => 1083344,
+//                                'extras' => []
+//                            ],
+//                        ]
+                ]
+            ]
+//            ]
+        ]);
+    }
+
+    public function getTourIds()
+    {
+        return $this->apiClient->request('GET', '/activity.json/active-ids', []);
+    }
+
+
+    public function getTour($id)
+    {
+        return $this->apiClient->request('GET', '/activity.json/' . $id, []);
+    }
+
+    public function getCat($id=858806, $type = 'ALL')
+    {
+        return $this->apiClient->request('GET', '/restapi/v2.0/experience/'.$id.'/components', [
+            'componentType' => $type
+        ]);
+    }
+
+    public function getPriceInfo($id)
+    {
+        return $this->apiClient->request('GET', '/restapi/v2.0/pricing/category/' . $id, []);
+    }
+
+    public function getSchedule($id)
+    {
+        return $this->apiClient->request('GET', '/restapi/v2.0/pricing/schedule/' . $id, []);
+    }
+
+    public function getAvailabl($id, $from, $to)
+    {
+        return $this->apiClient->request('GET', '/restapi/v2.0/availability/' . $id, [
+            'from' => $from ?? '2026-07-15',
+            'to' => $to ?? '2026-07-15'
+        ]);
+    }
+
+    public function getAvailabilities(array $tourIds)
+    {
+        return $this->apiClient->request('GET', '/activity.json/list-by-id', ['ids' => implode(',', $tourIds)]);
+    }
+
+    public function getPriceList($id)
+    {
+        return $this->apiClient->request('GET', '/activity.json/'.$id.'/price-list', []);
+    }
+
+
+
+    public function getPrice($id, $from, $to)
+    {
+        return $this->apiClient->request('GET', "/activity.json/{$id}/availabilities", [
+            'start' => $from ?? '2026-07-01',
+            'end'   => $to ?? '2026-07-31',
+//            'includeSoldOut' => true
+        ]);
+    }
+
+
     public function getPrices(){
         return $this->apiClient->request('GET', "/activity.json/858806/availabilities", [
             'start' => '2026-07-01',

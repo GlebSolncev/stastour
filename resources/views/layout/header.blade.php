@@ -3,6 +3,7 @@
 
 <title>@yield('title')</title>
 
+<script src="{{ mix('js/app.js') }}" defer></script>
 
 <link type="text/css" rel="stylesheet" href="/fonts/raleway/stylesheet.css">
 <link type="text/css" rel="stylesheet" href="/fonts/darkline/stylesheet.css">

@@ -19,26 +19,41 @@ class Stripe
 
     public function create(): array
     {
-        $basket = $this->getBasketItems();
-
-        if (!$basket['success']) {
-            return $basket;
+        $order = Order::find($this->orderId);
+        if (!$order || $order->status !== 'awaiting_payment') {
+            return ['message' => 'Order is not ready for payment', 'success' => false];
         }
 
         \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
 
 
-        $customer = \Stripe\Customer::create(['metadata' => ['order_id' => $this->orderId]]);
+        $customer = \Stripe\Customer::create([
+            'email' => $order->email,
+            'name' => $order->name,
+            'metadata' => ['order_id' => $this->orderId],
+        ]);
         $session = \Stripe\Checkout\Session::create([
             'payment_method_types' => ['card'],
-            'line_items' => [
-                $basket['items']
-            ],
+            'line_items' => [[
+                'price_data' => [
+                    'currency' => strtolower($order->currency),
+                    'product_data' => ['name' => 'Tour booking #' . $order->id],
+                    'unit_amount' => (int) round(((float) $order->amount) * 100),
+                ],
+                'quantity' => 1,
+            ]],
             'mode' => 'payment',
-            'success_url' => $_SERVER['APP_URL'],
-            'cancel_url' => $_SERVER['APP_URL'],
-            'customer' => $customer->id
+            'expires_at' => now()->addMinutes(30)->timestamp,
+            'success_url' => url('/checkout/payment/success?session_id={CHECKOUT_SESSION_ID}'),
+            'cancel_url' => url('/checkout/?payment=cancelled'),
+            'customer' => $customer->id,
+            'metadata' => ['order_id' => (string) $order->id],
+            'payment_intent_data' => [
+                'metadata' => ['order_id' => (string) $order->id],
+            ],
         ]);
+
+        $order->update(['stripe_session_id' => $session->id, 'status' => 'payment_pending']);
 
         return ['url' => $session->url];
     }

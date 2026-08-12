@@ -14,3 +14,5 @@
 <script type="text/javascript" src="/js/vendor/moment.js"></script>
 <script type="text/javascript" src="/js/vendor/choices.min.js"></script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBlrQXrqLLgNqovHO6Cj4oUgRjhRgoYU8&callback=window.delay.initGoogleMap"></script>
+
+<script src="{{ mix('js/app.js') }}" defer></script>

@@ -29,10 +29,10 @@ class OrdersListLayout extends Table
                     return $order->name;
                 }),
 
-            TD::make('basket', __('Basket'))
-                ->render(function (Order $order) {
-                    return $order->getBasketRows();
-                }),
+//            TD::make('basket', __('Basket'))
+//                ->render(function (Order $order) {
+//                    return $order->getBasketRows();
+//                }),
 
             TD::make('date', __('Date'))
                 ->render(function (Order $order) {
@@ -46,6 +46,15 @@ class OrdersListLayout extends Table
                 ->render(function (Order $order) {
                     return $order->is_paid ? 'Y' : 'N';
                 }),
+
+            TD::make('status', __('Status'))
+                ->render(fn (Order $order) => $order->status ?? 'legacy'),
+
+            TD::make('bokun_confirmation_code', __('Bokun'))
+                ->render(fn (Order $order) => $order->bokun_confirmation_code ?: '—'),
+
+            TD::make('bokun_status', __('Bokun status'))
+                ->render(fn (Order $order) => $order->bokun_status ?: '—'),
 
             TD::make(__('Action'))
                 ->align(TD::ALIGN_CENTER)

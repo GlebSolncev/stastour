@@ -31,6 +31,13 @@ class TourListLayout extends Table
                     return $tours->id;
                 }),
 
+            TD::make('bokun_id', __('Source'))
+                ->render(function (Tours $tours) {
+                    return $tours->bokun_id
+                        ? __('Bokun') . ' #' . $tours->bokun_id
+                        : __('Admin');
+                }),
+
             TD::make('id', __('Type'))
                 ->filter(Input::make())
                 ->render(function(Tours $tours) {

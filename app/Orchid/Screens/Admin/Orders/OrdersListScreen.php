@@ -16,7 +16,7 @@ class OrdersListScreen extends Screen
     public function query(): array
     {
         return [
-            'orders' => Order::all()
+            'orders' => Order::query()->orderBy('created_at', 'desc')->get()
         ];
     }
 
