@@ -38,6 +38,9 @@ class TourListLayout extends Table
                         : __('Admin');
                 }),
 
+            TD::make('is_active', __('Active'))
+                ->render(fn (Tours $tour) => $tour->is_active ? __('Yes') : __('No')),
+
             TD::make('id', __('Type'))
                 ->filter(Input::make())
                 ->render(function(Tours $tours) {

@@ -14,6 +14,7 @@ class SimilarTourController extends Controller
     public static function mock(string $type, int $limit)
     {
         $tours = Tours::inRandomOrder()
+            ->active()
             ->where('type_tour', '=', $type)
             ->limit($limit)
             ->get();

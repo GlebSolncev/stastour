@@ -17,6 +17,7 @@ class Tours extends Model
 
     protected $fillable = [
         'bokun_id',
+        'is_active',
         'name',
         'name_fr',
         'name_es',
@@ -41,6 +42,15 @@ class Tours extends Model
         'label_color',
         'sort'
     ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
 
     public static function boot()
     {

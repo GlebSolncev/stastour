@@ -65,6 +65,7 @@ class ToursEditScreen extends Screen
                 'detail_photo' => ['nullable', 'array', 'max:1'],
                 'detail_photo.*' => ['integer'],
                 'type_tour' => ['required', Rule::in(['private', 'group'])],
+                'is_active' => ['required', 'boolean'],
             ]);
 
             $tour = Tours::findOrFail($request->integer('id'));
@@ -73,6 +74,7 @@ class ToursEditScreen extends Screen
                 $fields = [
                     'name' => $request->string('name')->trim()->toString(),
                     'type_tour' => $request->string('type_tour')->toString(),
+                    'is_active' => $request->boolean('is_active'),
                 ];
 
                 if ($request->has('image')) {
@@ -99,6 +101,7 @@ class ToursEditScreen extends Screen
             }
 
             $data = $request->all();
+            $data['is_active'] = $request->boolean('is_active');
 
             if (isset($data['image'])) {
                 $data['image'] = implode(',', $data['image']);

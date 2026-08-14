@@ -7,6 +7,7 @@ use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Fields\TextArea;
 use Orchid\Screen\Fields\Upload;
+use Orchid\Screen\Fields\CheckBox;
 use Orchid\Screen\Layouts\Rows;
 
 class ToursEditLayout extends Rows
@@ -32,6 +33,12 @@ class ToursEditLayout extends Rows
             ->type('hidden')
             ->required()
             ->value($tour->id);
+
+        $isActive = CheckBox::make('is_active')
+            ->sendTrueOrFalse()
+            ->value((bool) $tour->is_active)
+            ->title(__('Active'))
+            ->placeholder(__('Show this tour on the website'));
 
         $images = Upload::make('image')
             ->value(static::getImagesIds($tour->image))
@@ -64,6 +71,7 @@ class ToursEditLayout extends Rows
                     ->value('Bokun #' . $tour->bokun_id),
                 $name,
                 $id,
+                $isActive,
                 Select::make('type_tour')
                     ->required()
                     ->options($this->query->toArray()['tour_type'])
@@ -96,6 +104,8 @@ class ToursEditLayout extends Rows
                 ->value($this->query->toArray()['tour']->bokun_id),
 
             $id,
+
+            $isActive,
 
             TextArea::make('preview_text')
                 ->title('Preview text')

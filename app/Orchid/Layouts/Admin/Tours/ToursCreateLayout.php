@@ -7,6 +7,7 @@ use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Fields\TextArea;
 use Orchid\Screen\Fields\Upload;
+use Orchid\Screen\Fields\CheckBox;
 use Orchid\Screen\Layouts\Rows;
 
 class ToursCreateLayout extends Rows
@@ -15,6 +16,12 @@ class ToursCreateLayout extends Rows
     protected function fields(): iterable
     {
         return [
+            CheckBox::make('is_active')
+                ->sendTrueOrFalse()
+                ->value(true)
+                ->title(__('Active'))
+                ->placeholder(__('Show this tour on the website')),
+
             Input::make('name')
                 ->type('text')
                 ->max(255)

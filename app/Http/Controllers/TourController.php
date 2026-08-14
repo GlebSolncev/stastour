@@ -15,7 +15,7 @@ class TourController extends Controller
     {
 
         /** @var Tours $tour */
-        if ($tour = Tours::query()->where('code', '=', $code)->first()) {
+        if ($tour = Tours::query()->active()->where('code', '=', $code)->first()) {
             return view('page.tour', [
                 'tour' => (object)[
                     'title' => $tour->name,
@@ -59,6 +59,7 @@ class TourController extends Controller
     {
         $result = [];
         $iterator = Tours::query()
+            ->active()
             ->select(['id', 'name'])
             ->where('type_tour', '=', $type)
             ->whereNull('bokun_id')

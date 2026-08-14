@@ -54,7 +54,11 @@ class ToursCreateScreen extends Screen
     public function save(Request $request)
     {
         try {
+            $request->validate([
+                'is_active' => ['required', 'boolean'],
+            ]);
             $data = $request->all();
+            $data['is_active'] = $request->boolean('is_active');
 
             if (isset($data['image'])) {
                 $data['image'] = implode(',', $data['image']);

@@ -42,7 +42,7 @@ class CatalogSectionController extends Controller
 
     public function getTourInfo(string $id)
     {
-        if ($tour = Tours::find($id)) {
+        if ($tour = Tours::active()->find($id)) {
             return json_encode([
                 'done' => true,
                 'data' => [
@@ -60,6 +60,7 @@ class CatalogSectionController extends Controller
     public static function getPage(string $type, int $page = 1)
     {
         $tours = Tours::query()
+            ->active()
             ->where('type_tour', '=', $type)
             ->orderBy('updated_at', 'desc')
             ->offset(($page - 1) * static::PAGE_COUNT)

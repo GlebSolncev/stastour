@@ -24,7 +24,7 @@ class BasketController extends Controller
             'timeslot.date' => ['required', 'date_format:Y-m-d', 'after_or_equal:today'],
         ]);
 
-        $tour = Tours::findOrFail($data['id']);
+        $tour = Tours::active()->findOrFail($data['id']);
         abort_if($tour->bokun_id, 422, 'Bokun tours must use Bokun checkout.');
 
         $basketItemId = \App\Models\BasketItem::addTour(
@@ -54,7 +54,7 @@ class BasketController extends Controller
             'pricing.*' => ['required', 'integer', 'min:1', 'max:99'],
         ]);
 
-        $tour = Tours::where('bokun_id', $data['tour_id'])->firstOrFail();
+        $tour = Tours::active()->where('bokun_id', $data['tour_id'])->firstOrFail();
         $passengers = [];
         foreach ($data['pricing'] as $categoryId => $quantity) {
             for ($i = 0; $i < $quantity; $i++) {
