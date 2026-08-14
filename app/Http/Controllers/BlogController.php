@@ -14,7 +14,7 @@ class BlogController extends Controller
 
         return view('page.blog', [
             'main' => $main,
-            'items' => $this->getPage(1, static::LIMIT, [$main->id]),
+            'items' => $this->getPage(1, static::LIMIT, $main ? [$main->id] : []),
             'show_tour' => !BasketController::checkTourInBasket()
         ]);
     }
@@ -34,14 +34,14 @@ class BlogController extends Controller
         $main = $this->getMainBlogEntity();
 
         return view('component.partial.blog-page', [
-            'items' => $this->getPage((int)request()->get('page') ?: 1, static::LIMIT, [$main->id])
+            'items' => $this->getPage((int)request()->get('page') ?: 1, static::LIMIT, $main ? [$main->id] : [])
         ]);
     }
 
     /**
      * @return object
      */
-    public function getMainBlogEntity(): object
+    public function getMainBlogEntity(): ?object
     {
 
         $item = News::query()
@@ -51,7 +51,7 @@ class BlogController extends Controller
             ->orderBy('created_at', 'desc')->first();
 
         /** @var News $item */
-        return $this->formatItem($item);
+        return $item ? $this->formatItem($item) : null;
     }
 
     private function getPage(int $page = 1, int $limit = 10, array $excludeIds = []): array
@@ -93,7 +93,7 @@ class BlogController extends Controller
     public function findNews(string $code): object
     {
         $news = News::query()
-            ->where('code', $code)->first();
+            ->where('code', $code)->firstOrFail();
 
         return $this->formatItem($news);
     }
@@ -110,13 +110,13 @@ class BlogController extends Controller
         ];
 
         if ($item['image']) {
+            $attachment = Attachment::find($item['image']);
 
-            $result['image'] = (object)[
-                'src' => Attachment::query()
-                    ->where('id', $item['image'])
-                    ->first()
-                    ->url()
-            ];
+            if ($attachment) {
+                $result['image'] = (object)[
+                    'src' => $attachment->url()
+                ];
+            }
         }
 
         return (object)$result;

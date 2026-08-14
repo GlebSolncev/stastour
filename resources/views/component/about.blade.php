@@ -10,7 +10,7 @@
 <section class="about">
     <div class="about__title wow fadeInUp" data-wow-duration="0.5s"> {{__('about.title')}}</div>
     <div class="about__image">
-        <img class="about__image--main" src="{{  $assets->about_background  }}" js-module="parallax" data-orientation="left">
+        <img class="about__image--main" src="{{  $assets->about_background ?? null  }}" js-module="parallax" data-orientation="left">
         <img class="about__image--mark" src="/asset/images/about-mark.png">
     </div>
     <div class="about__content">

@@ -10,14 +10,15 @@
 
 
       <div class="booking-stage">
-        <Preloader :is-visible="calendarLoading" />
         <AvailabilityCalendar
-            v-if="!calendarLoading"
-            :key="calendarVersion"
             :min-date="minDate"
             :calendar-data="calendarData"
             :list-pricing="listPricing"
+            :selected-month="currentMonth"
+            :selected-year="currentYear"
+            :is-refreshing="calendarLoading || calendarRefreshing"
             @date-selected="onDateSelected"
+            @month-change="onMonthChange"
         />
       </div>
 
@@ -83,14 +84,15 @@ const props = defineProps({
 // Состояние
 const ticketCategories = ref(props.initialCategories);
 const currentMonth = ref(new Date().getMonth() + 1)
+const currentYear = ref(new Date().getFullYear())
 const calendarData = ref({});
 const selectedDate = ref(null);
 const errorStartTimes = ref([]);
 const startTimes = ref({});
 const totalPrice = ref(0);
 const listPricing = ref({});
-const calendarVersion = ref(0);
 const calendarLoading = ref(false);
+const calendarRefreshing = ref(false);
 const slotsLoading = ref(false);
 const quoteLoading = ref(false);
 
@@ -127,16 +129,32 @@ const resetAfterPassengersChange = () => {
 const fetchCalendarData = async () => {
   const query = new URLSearchParams();
   Object.entries(listPricing.value).forEach(([id, count]) => query.set(`pricing[${id}]`, count));
+  query.set('year', currentYear.value);
   const response = await fetch(`/api/show-calendar/${props.tourId}/${currentMonth.value}?${query}`);
   if (!response.ok) throw new Error('Failed to load availability');
   calendarData.value = await response.json();
 }
 
+const onMonthChange = async ({ month, year }) => {
+  currentMonth.value = month;
+  currentYear.value = year;
+  resetAfterPassengersChange();
+  calendarRefreshing.value = true;
+
+  try {
+    await fetchCalendarData();
+  } catch (error) {
+    errorMessage.value = 'Availability is temporarily unavailable. Please try again.';
+    calendarData.value = {};
+  } finally {
+    calendarRefreshing.value = false;
+  }
+};
+
 onBeforeMount(async () => {
   try {
     calendarLoading.value = true;
     await fetchCalendarData();
-    calendarVersion.value++;
   } catch (error) {
     errorMessage.value = 'Availability is temporarily unavailable. Please try again.';
   } finally {
@@ -224,10 +242,9 @@ const debounceRefreshCalendar = () => {
   resetAfterPassengersChange();
   slotsLoading.value = false;
   quoteLoading.value = false;
-  calendarData.value = {};
-  calendarVersion.value++;
 
   if (!hasPassengers.value) {
+    calendarData.value = {};
     calendarLoading.value = false;
     return;
   }
@@ -236,7 +253,6 @@ const debounceRefreshCalendar = () => {
   debounceTimeout = setTimeout(async () => {
     try {
       await fetchCalendarData();
-      calendarVersion.value++;
     } catch (error) {
       errorMessage.value = error.message;
       calendarData.value = {};

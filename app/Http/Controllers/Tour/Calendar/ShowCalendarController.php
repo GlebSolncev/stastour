@@ -18,8 +18,18 @@ class ShowCalendarController extends Controller
         $month = (int) $month;
         abort_unless($tourId > 0 && $month >= 1 && $month <= 12, 422, 'Invalid calendar parameters.');
 
-        $from = Carbon::now()->setMonth($month)->format('Y-m-d');
-        $to = Carbon::now()->setMonth($month)->endOfMonth()->format('Y-m-d');
+        $year = $request->integer('year', Carbon::now()->year);
+        abort_unless($year >= Carbon::now()->year && $year <= Carbon::now()->year + 1, 422, 'Invalid calendar year.');
+
+        $selectedMonth = Carbon::create($year, $month, 1);
+        $from = $selectedMonth->startOfMonth()->format('Y-m-d');
+        $to = $selectedMonth->endOfMonth()->format('Y-m-d');
+        $startTimeLabels = Collection::make($apiService->getTour($tourId)['startTimes'] ?? [])
+            ->mapWithKeys(fn (array $startTime) => [
+                (int) ($startTime['id'] ?? 0) => trim((string) ($startTime['externalLabel'] ?? '')),
+            ])
+            ->filter()
+            ->all();
         $prices = $apiService->getPrice($tourId, $from, $to);
 
         $items = [];
@@ -36,6 +46,7 @@ class ShowCalendarController extends Controller
             $items[$price['date']][] = [
                 'startTimeId' => $price['startTimeId'],
                 'startTime' => $price['startTime'],
+                'externalLabel' => $startTimeLabels[(int) $price['startTimeId']] ?? null,
                 'pricesByRate' => $priceCategory
 
             ];

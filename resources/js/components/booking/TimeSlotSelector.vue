@@ -15,14 +15,16 @@
           :disabled="slot.disabled"
       />
 
-<!--      :disabled="errorStartTimes.includes(slot.startTimeId)"-->
-      <label :for="slot.startTimeId">{{ slot.startTime }}</label>
+      <label :for="slot.startTimeId" class="time-slot-label">
+        <span>{{ slot.startTime }}</span>
+        <span v-if="slot.externalLabel" class="time-slot-external-label">{{ slot.externalLabel }}</span>
+      </label>
     </div>
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   slots: {
     type: Array,
     required: true
@@ -43,5 +45,16 @@ defineEmits(['update:modelValue']);
 <style scoped>
 .tour__time-slots-container {
   transition: opacity 0.2s ease-in-out;
+}
+.time-slot-label {
+  box-sizing: border-box;
+  max-width: 100%;
+  white-space: normal;
+}
+.time-slot-external-label {
+  margin-left: 4px;
+}
+.time-slot-item {
+  max-width: 100%;
 }
 </style>
